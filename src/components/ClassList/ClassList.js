@@ -6,7 +6,8 @@ export default class ClassList extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      students: []
+      students: [],
+      // currentClass: this.props.match.params.class
     }
   }
 
@@ -30,6 +31,9 @@ export default class ClassList extends Component {
     
     return (
       <div className="box">
+        <Link to='/'>
+          Back to Home
+        </Link>
         <h1>{this.props.match.params.class}</h1>
         <h2>ClassList:</h2>
         { studentList }
